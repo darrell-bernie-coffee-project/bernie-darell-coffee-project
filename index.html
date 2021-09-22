@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -8,27 +8,288 @@
 <body>
 <h1>Coffee!</h1>
 
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <input id="submit" type="submit" />
+<!--<form>-->
+<!--    <label for="roast-selection"></label>-->
+<!--    <select id="roast-selection">-->
+<!--        <option>All</option>-->
+<!--        <option>light</option>-->
+<!--        <option>medium</option>-->
+<!--        <option>dark</option>-->
+<!--    </select>-->
+<!--    <input id="submit" type="submit" />-->
+
+</form>
+<!--    <input class="search-bar">-->
+
+<!--    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">-->
+
+<form class="coffee-forms">
+    <div class="container-fluid w-50">
+
+        <div class="coffe-types"></div>
+
+        <p>roast</p>
+
+        <select class="custom-select">
+            <option value="1">all</option>
+            <option value="2">Medium</option>
+            <option value="3">Light</option>
+            <option value="3">Dark</option>
+        </select>
+
+
+        <p>coffee name</p>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for coffee..">
+
+        <br>
+
+        <input id="submit" type="submit"/>
+
+        <hr>
+
+        <h2>ADD A COFFEE</h2>
+
+
+        <p>roast</p>
+
+        <select class="custom-select">
+            <option value="1">all</option>
+            <option value="2">Medium</option>
+            <option value="3">Light</option>
+            <option value="3">Dark</option>
+        </select>
+
+
+        <p>name</p>
+
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for coffee..">
+
+        <br>
+
+        <input id="submit" type="submit"/>
+
+
+
+    </div>
+    </div>
+
+
 </form>
 
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>ROAST</th>
-    </tr>
-    </thead>
-    <tbody id="coffees"></tbody>
-</table>
+
+<ul id="myUL">
+    <li><a href="#">
+        <div>
+            <h3>french</h3>
+            <p>dark</p>
+        </div>
+    </a>
+    </li>
+
+
+    <li><a href="#">
+        <div>
+            <h3>Italian</h3>
+            <p>dark</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>Viennese</h3>
+            <p>dark</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>Espresso</h3>
+            <p>dark</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>European</h3>
+            <p>dark</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>New Orleans </h3>
+            <p>dark</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>Continental </h3>
+            <p>dark</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>High</h3>
+            <p>dark</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>Breakfast</h3>
+
+            <p>medium</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>American</h3>
+
+            <p>medium</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>City</h3>
+            <p>medium</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>Cinnamon</h3>
+            <p>light</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>Half City</h3>
+            <p>light</p>
+        </div>
+    </a></li>
+
+    <li><a href="#">
+        <div>
+            <h3>Light City</h3>
+            <p>light</p>
+        </div>
+    </a></li>
+
+</ul>
+
+
+<!--<div>-->
+<!--    <h3>french</h3>-->
+<!--    <p>dark</p>-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--    <h3>Italian</h3>-->
+<!--    <p>dark</p>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--    <h3>Viennese</h3>-->
+<!--    <p>dark</p>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--    <h3>Espresso</h3>-->
+<!--    <p>dark</p>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--    <h3>European</h3>-->
+<!--    <p>dark</p>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--    <h3>New Orleans	</h3>-->
+<!--    <p>dark</p>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--    <h3>Continental	</h3>-->
+<!--    <p>dark</p>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--    <h3>High</h3>-->
+<!--    <p>dark</p>-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--    <h3>Breakfast</h3>-->
+
+<!--    <p>medium</p>-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--    <h3>American</h3>-->
+
+<!--    <p>medium</p>-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--    <h3>City</h3>-->
+<!--    <p>medium</p>-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--    <h3>Cinnamon</h3>-->
+<!--    <p>light</p>-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--    <h3>Half City</h3>-->
+<!--    <p>light</p>-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--    <h3>Light City</h3>-->
+<!--    <p>light</p>-->
+<!--</div>-->
+
 
 <script src="main.js"></script>
+
+
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName('li');
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+
 </body>
 </html>
