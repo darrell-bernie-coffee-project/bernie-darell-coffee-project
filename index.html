@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title></title>
 </head>
 <body>
 <h1>Coffee!</h1>
@@ -18,58 +20,57 @@
 <!--    </select>-->
 <!--    <input id="submit" type="submit" />-->
 
-</form>
+<!--</form>-->
 <!--    <input class="search-bar">-->
 
 <!--    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">-->
 
 <form class="coffee-forms">
-    <div class="container-fluid w-50">
+    <div class="col-6 container-fluid" style="float:right;">
 
-        <div class="coffe-types"></div>
+        <div class="coffee-types"></div>
 
-        <p>roast</p>
+        <p>Roast</p>
 
         <select class="custom-select">
             <option value="1">all</option>
-            <option value="2">Medium</option>
-            <option value="3">Light</option>
+            <option value="2">Light</option>
+            <option value="3">Medium</option>
             <option value="3">Dark</option>
         </select>
 
 
-        <p>coffee name</p>
+        <p>Coffee Name</p>
 
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for coffee..">
 
         <br>
-
+        <br>
         <input id="submit" type="submit"/>
 
         <hr>
 
-        <h2>ADD A COFFEE</h2>
+        <h4>ADD A COFFEE</h4>
 
 
-        <p>roast</p>
+        <p>Roast</p>
 
         <select class="custom-select">
             <option value="1">all</option>
-            <option value="2">Medium</option>
-            <option value="3">Light</option>
+            <option value="2">Light</option>
+            <option value="3">Medium</option>
             <option value="3">Dark</option>
         </select>
 
 
-        <p>name</p>
+        <p>Name</p>
 
 
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for coffee..">
 
         <br>
-
+        <br>
         <input id="submit" type="submit"/>
-
 
 
     </div>
@@ -78,112 +79,114 @@
 
 </form>
 
+<form class="Coffee-Flavors">
+    <div class="col-6 container-fluid" style="float:left;">
 
-<ul id="myUL">
-    <li><a href="#">
-        <div>
-            <h3>french</h3>
-            <p>dark</p>
-        </div>
-    </a>
-    </li>
+        <ol id="myUL">
+            <li><a href="#">
+                <div>
+                    <h3>French</h3><p>dark</p>
+                </div>
+            </a>
+            </li>
 
 
-    <li><a href="#">
-        <div>
-            <h3>Italian</h3>
-            <p>dark</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>Italian</h3>
+                    <p>dark</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>Viennese</h3>
-            <p>dark</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>Viennese</h3>
+                    <p>dark</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>Espresso</h3>
-            <p>dark</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>Espresso</h3>
+                    <p>dark</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>European</h3>
-            <p>dark</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>European</h3>
+                    <p>dark</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>New Orleans </h3>
-            <p>dark</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>New Orleans </h3>
+                    <p>dark</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>Continental </h3>
-            <p>dark</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>Continental </h3>
+                    <p>dark</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>High</h3>
-            <p>dark</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>High</h3>
+                    <p>dark</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>Breakfast</h3>
+            <li><a href="#">
+                <div>
+                    <h3>Breakfast</h3>
 
-            <p>medium</p>
-        </div>
-    </a></li>
+                    <p>medium</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>American</h3>
+            <li><a href="#">
+                <div>
+                    <h3>American</h3>
 
-            <p>medium</p>
-        </div>
-    </a></li>
+                    <p>medium</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>City</h3>
-            <p>medium</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>City</h3>
+                    <p>medium</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>Cinnamon</h3>
-            <p>light</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>Cinnamon</h3>
+                    <p>light</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>Half City</h3>
-            <p>light</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>Half City</h3>
+                    <p>light</p>
+                </div>
+            </a></li>
 
-    <li><a href="#">
-        <div>
-            <h3>Light City</h3>
-            <p>light</p>
-        </div>
-    </a></li>
+            <li><a href="#">
+                <div>
+                    <h3>Light City</h3>
+                    <p>light</p>
+                </div>
+            </a></li>
 
-</ul>
-
+        </ol>
+    </div>
+</form>
 
 <!--<div>-->
 <!--    <h3>french</h3>-->

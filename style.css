@@ -24,19 +24,29 @@ body h1{
 
 }
 
-.coffee-forms{
+h4 {
     display: flex;
-    /*justify-content:flex-end ;*/
-
-    width: 100%;
-
+    justify-content: center;
 }
 
+.coffee-forms {
+    /*display: flex;*/
+    /*justify-content: right;*/
+}
 
-#submit{
+.coffee-forms p {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
 
+#myInput {
+    width: 100%;
+}
+
+#submit {
+    width: 100%;
+    justify-content: center;
     display: flex;
-
-    background-color: #4ca7e5;
-
+    background-color: #3d85c4;
+    color: white;
 }
