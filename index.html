@@ -34,7 +34,7 @@
 
     <p>Roast</p>
 
-    <select class="custom-select">
+    <select id="select-roast1">
         <option value="1">all</option>
         <option value="2">Light</option>
         <option value="3">Medium</option>
@@ -60,9 +60,7 @@
 
     <p>Roast</p>
 
-    <select type="text" class="custom-select">
-
-
+    <select type="text" class="custom-select-roast2">
         <option value="1">all</option>
         <option value="2">Light</option>
         <option value="3">Medium</option>
@@ -205,52 +203,7 @@
 <script src="main.js"></script>
 
 
-<script>
-    function myFunction() {
-        // Declare variables
-        var input, filter, ul, li, a, i, txtValue;
-        input = document.getElementById('myInput');
 
-        filter = input.value.toUpperCase();
-        ul = document.getElementById("myUL");
-        li = ul.getElementsByTagName('li');
-
-        // Loop through all list items, and hide those who don't match the search query
-        for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("a")[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                li[i].style.display = "";
-            } else {
-                li[i].style.display = "none";
-            }
-        }
-    }
-
-
-    // function secondForm() {
-    //     // Declare variables
-    //     var select,option, filter, ul, li, a, i, txtValue;
-    //     select = document.getElementsByClassName('custom-select');
-    //
-    //     filter = select.value.toUpperCase();
-    //     ul = document.getElementById("myUL");
-    //     li = ul.getElementsByTagName('li');
-    //
-    //     // Loop through all list items, and hide those who don't match the search query
-    //     for (i = 0; i < li.length; i++) {
-    //         option = li[i].getElementsByTagName("option")[0];
-    //         txtValue = a.textContent || a.innerText;
-    //         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //             li[i].style.display = "";
-    //         } else {
-    //             li[i].style.display = "none";
-    //         }
-    //     }
-    // }
-
-
-</script>
 
 
 </body>
