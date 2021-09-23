@@ -28,61 +28,59 @@
 
 <!--first search form-->
 <form class="coffee-forms">
-    <div class="col-6 container-fluid" style="float:right;">
+<div class="col-6 container-fluid" style="float:right;">
 
-        <div class="coffee-types"></div>
+    <div class="coffee-types"></div>
 
-        <p>Roast</p>
+    <p>Roast</p>
 
-        <select class="custom-select">
-            <option value="1">all</option>
-            <option value="2">Light</option>
-            <option value="3">Medium</option>
-            <option value="3">Dark</option>
-        </select>
-
-
-        <p>Coffee Name</p>
-
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for coffee..">
-
-        <br>
-        <br>
-        <input id="resubmit" type="submit"/>
-
-        <hr>
-
-        <!--2nd search form-->
+    <select class="custom-select">
+        <option value="1">all</option>
+        <option value="2">Light</option>
+        <option value="3">Medium</option>
+        <option value="3">Dark</option>
+    </select>
 
 
-        <h4>ADD A COFFEE</h4>
+    <p>Coffee Name</p>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for coffee..">
+
+    <br>
+    <br>
+    <input id="submit" type="submit"/>
+
+    <hr>
+
+    <!--2nd search form-->
 
 
-        <p>Roast</p>
-
-        <select type="text" class="custom-select" onkeyup="secondForm()">
+    <h4>ADD A COFFEE</h4>
 
 
-            <option value="1">all</option>
-            <option value="2">Light</option>
-            <option value="3">Medium</option>
-            <option value="3">Dark</option>
-        </select>
+    <p>Roast</p>
+
+    <select type="text" class="custom-select">
 
 
-
-        <p>Name</p>
-
-
-        <input type="text" id="coffee-input"  placeholder="Search for coffee..">
-
-        <br>
-        <br>
-        <input id="submit" type="submit"/>
+        <option value="1">all</option>
+        <option value="2">Light</option>
+        <option value="3">Medium</option>
+        <option value="3">Dark</option>
+    </select>
 
 
-    </div>
-    </div>
+    <p>Name</p>
+
+
+    <input type="text" id="coffee-input" placeholder="Search for coffee..">
+
+    <br>
+    <br>
+    <input id="New-Coffee" type="submit" value="submit" onsearch="New Coffee"/>
+
+</div>
+</div>
 
 
 </form>
@@ -97,11 +95,10 @@
         <ul id="myUL">
 
 
-
-
             <li><a href="#">
                 <div>
-                    <h3>French</h3><p>dark</p>
+                    <h3>French</h3>
+                    <p>dark</p>
                 </div>
             </a>
             </li>
@@ -229,9 +226,6 @@
             }
         }
     }
-
-
-
 
 
     // function secondForm() {

@@ -1,5 +1,7 @@
 "use strict"
 
+
+
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
     html += '<td>' + coffee.id + '</td>';
@@ -55,4 +57,5 @@ var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+roastSelection.addEventListener("", updateCoffees);
 submitButton.addEventListener('click', updateCoffees);

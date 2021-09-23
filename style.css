@@ -10,10 +10,14 @@
 
 
 
-#myUL{
+#myUL {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
     list-style: none;
-    display: flex;
-    flex-direction: column;
+    /*justify-content: space-evenly;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
 }
 
 
@@ -44,6 +48,14 @@ h4 {
 }
 
 #submit {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    background-color: #3d85c4;
+    color: white;
+}
+
+#New-Coffee {
     width: 100%;
     justify-content: center;
     display: flex;
