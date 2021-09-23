@@ -51,6 +51,14 @@ h4 {
     color: white;
 }
 
+#resubmit{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    background-color: #3d85c4;
+    color: white;
+}
+
 
 #coffee-input {
     width: 100%;
