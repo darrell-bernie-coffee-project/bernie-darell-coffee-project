@@ -26,6 +26,8 @@ function updateCoffees(e) {
     coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (coffee.roast === "light"){
+            filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -75,33 +77,8 @@ var coffees = [
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
-
-let selectRoast1 = document.querySelector('#select-roast1');
-
-
-
-
-selectRoast1.addEventListener("change", function () {
-
-    let selectedRoast = selectRoast1.value;
-
-    let html = '';
-
-
-    coffees.forEach(coffee => {
-        if (selectedRoast === coffee.roast) {
-            console.log(renderCoffee(coffee));
-            coffeeBody.innerHTML = html += renderCoffee(coffee);
-        } else if(selectedRoast === “
-        all”)
-        {
-            coffeeBody.innerHTML = renderCoffee(coffee);
-        }
-    })
-})
-
+var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
 
-roastSelection.addEventListener("", updateCoffees);
 submitButton.addEventListener('click', updateCoffees);

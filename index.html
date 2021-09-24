@@ -8,86 +8,66 @@
     <title></title>
 </head>
 <body>
+
 <h1>Coffee!</h1>
 
-<!--<form>-->
-<!--    <label for="roast-selection"></label>-->
-<!--    <select id="roast-selection">-->
-<!--        <option>All</option>-->
-<!--        <option>light</option>-->
-<!--        <option>medium</option>-->
-<!--        <option>dark</option>-->
-<!--    </select>-->
-<!--    <input id="submit" type="submit" />-->
+<div class="coffee-forms col-6 container-fluid" style="float:right;">
 
-<!--</form>-->
-<!--    <input class="search-bar">-->
+    <form>
 
-<!--    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">-->
+        <div class="coffeeTypes">
+            <label for="selectRoast">Roast</label>
+            <select id="selectRoast" class="roastOptions">
+                <option value="1">all</option>
+                <option value="2">Light</option>
+                <option value="3">Medium</option>
+                <option value="4">Dark</option>
+            </select>
+        </div>
 
+        <div class="coffeeName">
+            <label for="myInput">Coffee Name</label>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for coffee..">
 
-<!--first search form-->
-<form class="coffee-forms">
-<div class="col-6 container-fluid" style="float:right;">
+            <br>
+            <br>
+        </div>
+        <button id="Coffee-Name" class="btn btn-primary" type="submit">Submit</button>
 
-    <div class="coffee-types"></div>
-
-    <p>Roast</p>
-
-    <select id="select-roast1">
-        <option value="1">all</option>
-        <option value="2">Light</option>
-        <option value="3">Medium</option>
-        <option value="3">Dark</option>
-    </select>
-
-
-<!--    <p>Coffee Name</p>-->
-
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for coffee..">
-
-    <br>
-    <br>
-    <input id="submit" type="submit"/>
-
-<!--    <hr>-->
+    </form>
+    <hr>
 
     <!--2nd search form-->
 
+    <form>
+        <h4>ADD A COFFEE</h4>
 
-    <h4>ADD A COFFEE</h4>
+        <div class="customRoast">
+            <label for="customRoast2">Roast</label>
+            <select id="customRoast2" class="custom-form">
+                <option value="1">all</option>
+                <option value="2">Light</option>
+                <option value="3">Medium</option>
+                <option value="4">Dark</option>
+            </select>
+        </div>
 
+        <div class="customName">
+            <label for="customCoffee">Requested Coffee</label>
+            <input type="text" id="customCoffee" placeholder="Search for coffee..">
+            <br>
+            <br>
+        </div>
 
-    <p>Roast</p>
+        <button id="New-Coffee" class="btn btn-primary" type="submit">Submit</button>
 
-    <select type="text" class="custom-select-roast2">
-        <option value="1">all</option>
-        <option value="2">Light</option>
-        <option value="3">Medium</option>
-        <option value="3">Dark</option>
-    </select>
-
-
-    <p>Name</p>
-
-
-    <input type="text" id="coffee-input" placeholder="Search for coffee..">
-
-    <br>
-    <br>
-    <input id="New-Coffee" type="submit" value="submit" onsearch="New Coffee"/>
+    </form>
 
 </div>
-</div>
-
-
-</form>
-
 
 <!--coffee list-->
 
-
-<form class="Coffee-Flavors">
+<div class="Coffee-Flavors">
     <div class="col-6 container-fluid" style="float:left;">
 
         <ul id="myUL">
@@ -197,13 +177,10 @@
 
         </ul>
     </div>
-</form>
+</div>
 
 
 <script src="main.js"></script>
-
-
-
 
 
 </body>
