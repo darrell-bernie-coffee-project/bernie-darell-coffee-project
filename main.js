@@ -68,6 +68,33 @@ function myFunction() {
 }
 
 
+
+
+
+
+
+function secondFunction() {
+    // Declare variables
+    var select, filter, ul, li, a, i, txtValue;
+    select = document.getElementById('selectRoast');
+
+    filter = select.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -93,7 +120,7 @@ let submitButton2 = document.querySelector("#New-Coffee");
 var roastSelection = document.querySelector("#selectRoast");
 
 
-tbody.innerHTML = renderCoffees(coffees);
+// tbody.innerHTML = renderCoffees(coffees);
 
 // roastOption1.addEventListener("click", function (){
 //     let selectedRoast = roastOption1.value;
