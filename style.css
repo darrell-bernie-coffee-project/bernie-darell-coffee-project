@@ -8,7 +8,9 @@
 /*    padding: 5px 10px;*/
 /*}*/
 
-
+.Coffee-Flavors {
+    /*display: none;*/
+}
 
 #myUL {
     columns: 2;

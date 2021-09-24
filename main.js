@@ -26,13 +26,23 @@ function updateCoffees(e) {
     coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
-        } else if (coffee.roast === "light"){
-            filteredCoffees.push(coffee);
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// function addACoffee(e) {
+//     e.preventDefault();
+//     var coffee = {
+//         id: coffees.length + 1,
+//         name: document.getElementById("customCoffee").value,
+//         roast: document.getElementById("customRoast2").value
+//     };
+//
+//     coffees.push(coffee);
+//     updateCoffees(e);
+//     document.getElementById("customCoffee").value = " ";
+// }
 
 function myFunction() {
     // Declare variables
@@ -76,23 +86,35 @@ var coffees = [
 
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-let selectRoast = document.querySelector("#selectRoast");
+var submitButton = document.querySelector('#Coffee-Name');
+let submitButton2 = document.querySelector("#New-Coffee")
+let roastSelection = document.querySelector('#roast-selection');
+let roastOption1 = document.querySelector("#selectRoast");
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
-selectRoast.addEventListener("click", function (){
-    let selectedRoast = selectRoast.value;
-    let html = " ";
-    coffees.forEach (coffee => {
-        if (selectedRoast === coffee.roast) {
-            console.log(renderCoffee(coffee));
-            tbody.innerHTML = html += renderCoffee(coffee);
-        } else if (selectedRoast === "1") {
-            tbody.innerHTML = renderCoffees(coffees);
-        }
-    })
-})
+// roastOption1.addEventListener("click", function (){
+//     let selectedRoast = roastOption1.value;
+//     let html = " ";
+//     coffees.forEach (coffee => {
+//         if (selectedRoast === coffee.roast) {
+//             console.log(renderCoffee(coffee));
+//             tbody.innerHTML = html += renderCoffee(coffee);
+//         } else if (selectedRoast === "all") {
+//             tbody.innerHTML = renderCoffees(coffees);
+//         }
+//     })
+// })
 
 submitButton.addEventListener('click', updateCoffees);
+submitButton2.addEventListener("click", updateCoffees);
+
+// code to make hidden text appear:
+// document.getElementById("myInput").addEventListener('change', function() {
+//     if (document.getElementById("myInput").value.length > 1) {
+//         document.getElementsByClassName("Coffee-Flavors").style.visibility = "visible";
+//     } else {
+//         document.getElementsByClassName("Coffee-Flavors").style.visibility = "hidden";
+//     }
+// });
