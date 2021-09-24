@@ -78,7 +78,21 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+let selectRoast = document.querySelector("#selectRoast");
 
 tbody.innerHTML = renderCoffees(coffees);
+
+selectRoast.addEventListener("click", function (){
+    let selectedRoast = selectRoast.value;
+    let html = " ";
+    coffees.forEach (coffee => {
+        if (selectedRoast === coffee.roast) {
+            console.log(renderCoffee(coffee));
+            tbody.innerHTML = html += renderCoffee(coffee);
+        } else if (selectedRoast === "1") {
+            tbody.innerHTML = renderCoffees(coffees);
+        }
+    })
+})
 
 submitButton.addEventListener('click', updateCoffees);
