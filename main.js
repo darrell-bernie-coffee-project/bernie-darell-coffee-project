@@ -2,11 +2,10 @@
 
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
@@ -36,14 +35,13 @@ function updateCoffees(e) {
 function addACoffee(e) {
     e.preventDefault();
     var coffee = {
-        id: coffees.length + 1,
         name: document.getElementById("customCoffee").value,
         roast: document.getElementById("customRoast2").value
     };
 
     coffees.push(coffee);
-    updateCoffees(e);
-    document.getElementById("customCoffee").value = " ";
+    coffeesHtml.innerHTML=renderCoffees(coffees)
+
 }
 
 
@@ -52,24 +50,27 @@ function addACoffee(e) {
 
 function myFunction() {
     // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter,  i;
+    var filterTheCoffees =[]
     input = document.getElementById('myInput');
 
     filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
+    // ul = document.getElementById("list");
+    // li = ul.getElementsByTagName('li');
 
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
+    // Loop through coffees array, and hide those who don't match the search query
+    for (i = 0; i < coffees.length; i++) {
+        if (coffees[i].name.toUpperCase().includes(filter)) {
+            filterTheCoffees.push(coffees[i])
         }
     }
+    console.log(filterTheCoffees)
+    coffeesHtml.innerHTML=renderCoffees(filterTheCoffees)
 }
+
+
+
+
 
 
 
@@ -121,33 +122,36 @@ var coffees = [
 ];
 
 
-coffees.push("submit")
 
 
+var coffeesHtml = document.querySelector("#renderCoffees")
 
-var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#Coffee-Name');
 let submitButton2 = document.querySelector("#New-Coffee");
-let roastSelection = document.querySelector(".roastOptions");
+let roastSelection = document.querySelector("#selectRoast");
 
 
 // tbody.innerHTML = renderCoffees(coffees);
 
-// roastSelection.addEventListener("click", function (){
-//     let selectedRoast = roastSelection.value;
-//     let html = " ";
-//     coffees.forEach (coffee => {
-//         if (selectedRoast === coffee.roast) {
-//             console.log(renderCoffee(coffee));
-//             tbody.innerHTML = html += renderCoffee(coffee);
-//         } else if (selectedRoast === "all") {
-//             tbody.innerHTML = renderCoffees(coffees);
-//         }
-//     })
-// })
+roastSelection.addEventListener("change", function (){
+    let selectedRoast = roastSelection.value;
+    console.log(selectedRoast)
+    let html = " "; var filterTheCoffees=[]
+    coffees.forEach (coffee => {
+        if (selectedRoast.toLowerCase() === coffee.roast) {
+            filterTheCoffees.push(coffee)
+        }
+    })
+    coffeesHtml.innerHTML = renderCoffees(filterTheCoffees);
+
+})
+
+
+
+coffeesHtml.innerHTML=renderCoffees(coffees)
 
 submitButton.addEventListener('click', updateCoffees);
-submitButton2.addEventListener("click", updateCoffees);
+submitButton2.addEventListener("click", addACoffee);
 
 // code to make hidden text appear:
 // document.getElementById("myInput").addEventListener('change', function() {
