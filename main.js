@@ -22,14 +22,13 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
     });
     // tbody.innerHTML = renderCoffees(filteredCoffees);
 }
-
 
 
 function addACoffee(e) {
@@ -40,18 +39,17 @@ function addACoffee(e) {
     };
 
     coffees.push(coffee);
-    coffeesHtml.innerHTML=renderCoffees(coffees)
+    coffeesHtml.innerHTML = renderCoffees(coffees)
 
 }
-
 
 
 // the first search bar with keywords//
 
 function myFunction() {
     // Declare variables
-    var input, filter,  i;
-    var filterTheCoffees =[]
+    var input, filter, i;
+    var filterTheCoffees = []
     input = document.getElementById('myInput');
 
     filter = input.value.toUpperCase();
@@ -65,17 +63,8 @@ function myFunction() {
         }
     }
     console.log(filterTheCoffees)
-    coffeesHtml.innerHTML=renderCoffees(filterTheCoffees)
+    coffeesHtml.innerHTML = renderCoffees(filterTheCoffees)
 }
-
-
-
-
-
-
-
-
-
 
 
 // function secondFunction() {
@@ -100,9 +89,6 @@ function myFunction() {
 // }
 
 
-
-
-
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
@@ -122,8 +108,6 @@ var coffees = [
 ];
 
 
-
-
 var coffeesHtml = document.querySelector("#renderCoffees")
 
 var submitButton = document.querySelector('#Coffee-Name');
@@ -133,15 +117,14 @@ let roastSelection = document.querySelector("#selectRoast");
 
 // tbody.innerHTML = renderCoffees(coffees);
 
-roastSelection.addEventListener("change", function (){
+roastSelection.addEventListener("change", function () {
     let selectedRoast = roastSelection.value;
     console.log(selectedRoast)
-    let html = " "; var filterTheCoffees=[]
-    coffees.forEach (coffee => {
+    let html = " ";
+    var filterTheCoffees = []
+    coffees.forEach(coffee => {
         if (selectedRoast.toLowerCase() === coffee.roast) {
             filterTheCoffees.push(coffee)
-        } else if (selectedRoast === "all"){
-            coffeesHtml.innerHTML=renderCoffees(coffees)
         }
     })
     coffeesHtml.innerHTML = renderCoffees(filterTheCoffees);
@@ -149,8 +132,7 @@ roastSelection.addEventListener("change", function (){
 })
 
 
-
-coffeesHtml.innerHTML=renderCoffees(coffees)
+coffeesHtml.innerHTML = renderCoffees(coffees)
 
 submitButton.addEventListener('click', updateCoffees);
 submitButton2.addEventListener("click", addACoffee);
