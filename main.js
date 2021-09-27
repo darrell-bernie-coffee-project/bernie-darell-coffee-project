@@ -28,22 +28,32 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
+<<<<<<< HEAD
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
+=======
+    // tbody.innerHTML = renderCoffees(filteredCoffees);
+>>>>>>> 3b21600c84da3df6d895b99b3d47d635160c4d89
 }
 
-// function addACoffee(e) {
-//     e.preventDefault();
-//     var coffee = {
-//         id: coffees.length + 1,
-//         name: document.getElementById("customCoffee").value,
-//         roast: document.getElementById("customRoast2").value
-//     };
-//
-//     coffees.push(coffee);
-//     updateCoffees(e);
-//     document.getElementById("customCoffee").value = " ";
-// }
+
+
+function addACoffee(e) {
+    e.preventDefault();
+    var coffee = {
+        id: coffees.length + 1,
+        name: document.getElementById("customCoffee").value,
+        roast: document.getElementById("customRoast2").value
+    };
+
+    coffees.push(coffee);
+    updateCoffees(e);
+    document.getElementById("customCoffee").value = " ";
+}
+
+
+
+// the first search bar with keywords//
 
 function myFunction() {
     // Declare variables
@@ -67,26 +77,41 @@ function myFunction() {
 }
 
 
+<<<<<<< HEAD
 function secondFunction() {
     // Declare variables
     var select, filter, ul, li, a, i, txtValue;
     select = document.getElementById('selectRoast');
+=======
 
-    filter = select.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
 
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
+
+
+
+// function secondFunction() {
+//     // Declare variables
+//     var select, filter, ul, li, a, i, txtValue;
+//     select = document.getElementById('selectRoast');
+//
+//     filter = select.value.toUpperCase();
+//     ul = document.getElementById("myUL");
+//     li = ul.getElementsByTagName('li');
+//
+//     // Loop through all list items, and hide those who don't match the search query
+//     for (i = 0; i < li.length; i++) {
+//         a = li[i].getElementsByTagName("a")[0];
+//         txtValue = a.textContent || a.innerText;
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//             li[i].style.display = "";
+//         } else {
+//             li[i].style.display = "none";
+//         }
+//     }
+// }
+
+>>>>>>> 3b21600c84da3df6d895b99b3d47d635160c4d89
+
+
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -106,6 +131,10 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+
+coffees.push("submit")
+
 
 
 var tbody = document.querySelector('#coffees');
