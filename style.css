@@ -8,6 +8,24 @@
 /*    padding: 5px 10px;*/
 /*}*/
 
+.container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+body {
+    background-image: url("https://img1.pnghut.com/8/8/5/G1jYbhTewt/logo-food-area-cafe-vegetarian-cuisine.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 
 #renderCoffees {
     columns: 2;
@@ -21,11 +39,11 @@
 }
 
 
-body h1{
-    display: flex;
-    justify-content:center ;
+/*body h1{*/
+/*    display: flex;*/
+/*    justify-content:center ;*/
 
-}
+/*}*/
 
 h4 {
     display: flex;
@@ -75,8 +93,30 @@ h4 {
     color: white;
 }
 
+.coffeeTypes label {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
+.coffeeName label {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
+h4 {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.customRoast label {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.customName label {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 /*#resubmit{*/
 /*    width: 100%;*/
 /*    justify-content: center;*/
@@ -104,4 +144,9 @@ h4 {
 .coffeeName label {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.Coffee-Flavors {
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }

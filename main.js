@@ -140,6 +140,8 @@ roastSelection.addEventListener("change", function (){
     coffees.forEach (coffee => {
         if (selectedRoast.toLowerCase() === coffee.roast) {
             filterTheCoffees.push(coffee)
+        } else if (selectedRoast === "all"){
+            coffeesHtml.innerHTML=renderCoffees(coffees)
         }
     })
     coffeesHtml.innerHTML = renderCoffees(filterTheCoffees);
