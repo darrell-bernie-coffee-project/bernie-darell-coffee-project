@@ -137,11 +137,4 @@ coffeesHtml.innerHTML = renderCoffees(coffees)
 submitButton.addEventListener('click', updateCoffees);
 submitButton2.addEventListener("click", addACoffee);
 
-// code to make hidden text appear:
-// document.getElementById("myInput").addEventListener('change', function() {
-//     if (document.getElementById("myInput").value.length > 1) {
-//         document.getElementsByClassName("Coffee-Flavors").style.visibility = "visible";
-//     } else {
-//         document.getElementsByClassName("Coffee-Flavors").style.visibility = "hidden";
-//     }
-// });
+
